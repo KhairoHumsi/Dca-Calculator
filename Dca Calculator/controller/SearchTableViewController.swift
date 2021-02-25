@@ -98,24 +98,34 @@ class SearchTableViewController: UITableViewController, UIAnimatable {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let searchModel = self.searchModel {
-            let symbol = searchModel.items[indexPath.item].symbol
-            handelSelection(for: symbol)
+            let searchResult = searchModel.items[indexPath.item]
+            handelSelection(for: searchResult.symbol, searchResult: searchResult)
         }
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
-    private func handelSelection(for symbol: String) {//Didnt test yet, until fixing the issue
-        apiService.fetchTimeSeariesMonthlyAdjustPublisher(keywords: symbol).sink { (complitionResult) in
+    private func handelSelection(for symbol: String, searchResult: SearchResult) {
+        showLoadingAnimation()
+        apiService.fetchTimeSeariesMonthlyAdjustPublisher(keywords: symbol).sink { [weak self] (complitionResult) in
+            self?.hideLoadingAnimation()
             switch complitionResult {
             case .failure(let error):
                 print(error)
             case .finished: break
             }
-        } receiveValue: { (timeSeriesMonthlyAdusted) in
-            print("success: \(timeSeriesMonthlyAdusted.getMonthInfos())")
+        } receiveValue: { [weak self] (timeSeriesMonthlyAdusted) in
+            self?.hideLoadingAnimation()
+            let asset = Asset(searchResult: searchResult, timeSeriesMonthlyAdjusted: timeSeriesMonthlyAdusted)
+            self?.performSegue(withIdentifier: "showCalculator", sender: asset)
+//            print("success: \(timeSeriesMonthlyAdusted.getMonthInfos())")
         }.store(in: &subscribers)
-
-        
-//        performSegue(withIdentifier: "showCalculator", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showCalculator", let destination = segue.destination as? CalculatorTableViewController, let asset = sender as? Asset {
+            
+            destination.asset = asset
+        }
     }
 }
 
