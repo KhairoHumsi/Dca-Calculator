@@ -111,7 +111,7 @@ class SearchTableViewController: UITableViewController, UIAnimatable {
             case .finished: break
             }
         } receiveValue: { (timeSeriesMonthlyAdusted) in
-            print("success: \(timeSeriesMonthlyAdusted)")
+            print("success: \(timeSeriesMonthlyAdusted.getMonthInfos())")
         }.store(in: &subscribers)
 
         
