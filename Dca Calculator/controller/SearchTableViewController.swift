@@ -29,6 +29,7 @@ class SearchTableViewController: UITableViewController, UIAnimatable {
     private let apiService = APIService()
     private var subscribers = Set<AnyCancellable>()
     private var searchModel: SearchModel?
+    
     @Published private var searchQuery = String()
     @Published private var mode : Mode = .onboarding
     
@@ -96,7 +97,25 @@ class SearchTableViewController: UITableViewController, UIAnimatable {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "showCalculator", sender: nil)
+        if let searchModel = self.searchModel {
+            let symbol = searchModel.items[indexPath.item].symbol
+            handelSelection(for: symbol)
+        }
+    }
+    
+    private func handelSelection(for symbol: String) {
+        apiService.fetchTimeSeariesMonthlyAdjustPublisher(keywords: symbol).sink { (complitionResult) in
+            switch complitionResult {
+            case .failure(let error):
+                print(error)
+            case .finished: break
+            }
+        } receiveValue: { (timeSeriesMonthlyAdusted) in
+            print("success: \(timeSeriesMonthlyAdusted)")
+        }.store(in: &subscribers)
+
+        
+//        performSegue(withIdentifier: "showCalculator", sender: nil)
     }
 }
 
