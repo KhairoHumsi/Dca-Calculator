@@ -103,7 +103,7 @@ class SearchTableViewController: UITableViewController, UIAnimatable {
         }
     }
     
-    private func handelSelection(for symbol: String) {
+    private func handelSelection(for symbol: String) {//Didnt test yet, until fixing the issue
         apiService.fetchTimeSeariesMonthlyAdjustPublisher(keywords: symbol).sink { (complitionResult) in
             switch complitionResult {
             case .failure(let error):
