@@ -1,0 +1,6 @@
+framework module Pods_Dca_Calculator {
+  umbrella header "Pods-Dca Calculator-umbrella.h"
+
+  export *
+  module * { export * }
+}
