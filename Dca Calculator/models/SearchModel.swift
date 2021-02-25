@@ -21,7 +21,7 @@ struct SearchResult: Decodable {
     let type: String
     let currency: String
     
-    enum CoingKeys: String, CodingKey {
+    enum CodingKeys: String, CodingKey {
         case symbol = "1. symbol"
         case name = "2. name"
         case type = "3. type"
