@@ -17,9 +17,19 @@ struct DCAService {
         
         let numberOfShares = getNumberOfShares(asset: asset, initialInvestmentAmount: initialInvestmentAmount, monthlyDollerCostAvaregingAmount: monthlyDollerCostAvaregingAmount, initialDateOfInvestmentIndex: initialDateOfInvestmentIndex)
         
-        let currentVale = getCurrentValue(numberOfShares: numberOfShares, latestSharePrice: latestSharePrice)
+        let currentValue = getCurrentValue(numberOfShares: numberOfShares, latestSharePrice: latestSharePrice)
         
-        return .init(currentValue: currentVale, investmentAmount: investmentAmount, gainAmount: 0, yield: 0, annualReturn: 0)
+        let isProfitable = currentValue > investmentAmount
+        
+        let gain = currentValue - investmentAmount
+        
+        let yield = gain / investmentAmount
+        
+        let annualReturn = getAnnualReturn(currentValue: currentValue,
+                                           investmentAmount: investmentAmount,
+                                           initialDateOfInvestmentIndex: initialDateOfInvestmentIndex)
+        
+        return .init(currentValue: currentValue, investmentAmount: investmentAmount, gainAmount: gain, yield: 0, annualReturn: 0, isProfitable: isProfitable)
     }
     
     private func getInvestmentAmount(initialInvestmentAmount: Double, monthlyDollerCostAvaregingAmount: Double, initialDateOfInvestmentIndex: Int) -> Double {
@@ -53,6 +63,13 @@ struct DCAService {
         
         return totalShares
     }
+    
+    private func getAnnualReturn(currentValue: Double, investmentAmount: Double, initialDateOfInvestmentIndex: Int) -> Double {
+        let rate = currentValue / investmentAmount
+        let years = (initialDateOfInvestmentIndex.doubleValue + 1) / 12
+        let result = pow(rate, (1 / years)) - 1
+        return result
+    }
 }
 
 struct DCAResult {
@@ -61,4 +78,5 @@ struct DCAResult {
     let gainAmount: Double
     let yield: Double
     let annualReturn: Double
+    let isProfitable: Bool
 }
