@@ -22,6 +22,8 @@ class CalculatorTableViewController: UITableViewController {
     var asset: Asset?
     
     @Published private var initialDateOfInvestmentIndex : Int?
+    @Published private var initialInvestmentAmount : Int?
+    @Published private var monthlyDollrtCostAveraging : Int?
     
     private var subsicribers = Set<AnyCancellable>()
     
@@ -65,6 +67,24 @@ class CalculatorTableViewController: UITableViewController {
             if let dateString = self?.asset?.timeSeriesMonthlyAdjusted.getMonthInfos()[index].date.MMYYFormat {
                 self?.initialDateOfInvestmentTextField.text = dateString
             }
+        }.store(in: &subsicribers)
+        
+        NotificationCenter.default.publisher(for: UITextField.textDidChangeNotification, object: initialInvestmentAmountTextField).compactMap({
+            ($0.object as? UITextField)?.text
+        }).sink { [weak self] (text) in
+            self?.initialInvestmentAmount = Int(text) ?? 0
+            print("initialInvestmentAmountTextField: \(text)")
+        }.store(in: &subsicribers)
+        
+        NotificationCenter.default.publisher(for: UITextField.textDidChangeNotification, object: monthlyDollrtCostAveragingTextField).compactMap({
+            ($0.object as? UITextField)?.text
+        }).sink { [weak self] (text) in
+            self?.monthlyDollrtCostAveraging = Int(text) ?? 0
+            print("monthlyDollrtCostAveragingTextField: \(text)")
+        }.store(in: &subsicribers)
+        
+        Publishers.CombineLatest3($initialInvestmentAmount, $monthlyDollrtCostAveraging, $initialDateOfInvestmentIndex).sink { (initialInvestmentAmount, monthlyDollrtCostAveraging, initialDateOfInvestmentIndex) in
+            print("\(initialInvestmentAmount), \(monthlyDollrtCostAveraging), \(initialDateOfInvestmentIndex)")
         }.store(in: &subsicribers)
     }
     
