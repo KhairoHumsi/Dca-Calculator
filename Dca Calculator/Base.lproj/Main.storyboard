@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ooe-Q9-Zcg">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -11,31 +12,31 @@
             <objects>
                 <tableViewController id="PJd-fw-MMm" customClass="SearchTableViewController" customModule="Dca_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="NWe-44-ZIP">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellId" rowHeight="88" id="l1p-wn-Vfv" customClass="SearchTableViewCell" customModule="Dca_Calculator" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="600" height="88"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="88"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="l1p-wn-Vfv" id="2p4-nY-FDi">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="88"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="88"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="9rZ-ke-PSx">
-                                            <rect key="frame" x="16" y="8" width="568" height="72"/>
+                                            <rect key="frame" x="16" y="8" width="382" height="72"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="GEV-YA-RBM">
-                                                    <rect key="frame" x="0.0" y="0.0" width="392" height="72"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="206" height="72"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y32-K8-9dY">
-                                                            <rect key="frame" x="0.0" y="0.0" width="392" height="54"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="206" height="54"/>
                                                             <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Js-Ds-kEy">
-                                                            <rect key="frame" x="0.0" y="54" width="392" height="18"/>
+                                                            <rect key="frame" x="0.0" y="54" width="206" height="18"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="18" id="5kf-wd-c1i"/>
                                                             </constraints>
@@ -49,7 +50,7 @@ CQ
                                                     </subviews>
                                                 </stackView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="91l-Wm-Qb3">
-                                                    <rect key="frame" x="408" y="0.0" width="160" height="72"/>
+                                                    <rect key="frame" x="222" y="0.0" width="160" height="72"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Boeing Company" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jBd-zN-wZi">
                                                             <rect key="frame" x="0.0" y="0.0" width="160" height="72"/>
@@ -97,24 +98,24 @@ CQ
             <objects>
                 <tableViewController id="m5P-yF-Fun" customClass="CalculatorTableViewController" customModule="Dca_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="mdP-p8-Sc4">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <sections>
                             <tableViewSection id="0ox-Id-Meg">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="150" id="kRg-ce-Thh">
-                                        <rect key="frame" x="0.0" y="28" width="600" height="150"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kRg-ce-Thh" id="j4r-WZ-iEe">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="150"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="iD4-Wf-CqA">
-                                                    <rect key="frame" x="16" y="16" width="568" height="118"/>
+                                                    <rect key="frame" x="16" y="16" width="382" height="118"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="vAA-BL-pIF">
-                                                            <rect key="frame" x="0.0" y="0.0" width="568" height="19.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="382" height="19.5"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="SPY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lW0-7G-vo5">
                                                                     <rect key="frame" x="0.0" y="0.0" width="32.5" height="19.5"/>
@@ -123,7 +124,7 @@ CQ
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="S&amp;P 500 ETF" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WyP-6z-ccL">
-                                                                    <rect key="frame" x="40.5" y="0.0" width="527.5" height="19.5"/>
+                                                                    <rect key="frame" x="40.5" y="0.0" width="341.5" height="19.5"/>
                                                                     <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="14"/>
                                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <color key="highlightedColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -131,10 +132,10 @@ CQ
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="TM1-pX-z5s">
-                                                            <rect key="frame" x="0.0" y="23.5" width="568" height="16.5"/>
+                                                            <rect key="frame" x="0.0" y="23.5" width="382" height="16.5"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Hyo-Q0-OA4">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="568" height="16.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="382" height="16.5"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Current Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KLj-mZ-etM">
                                                                             <rect key="frame" x="0.0" y="0.0" width="88.5" height="16.5"/>
@@ -143,7 +144,7 @@ CQ
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(USD)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vJo-kd-qjv">
-                                                                            <rect key="frame" x="92.5" y="0.0" width="475.5" height="16.5"/>
+                                                                            <rect key="frame" x="92.5" y="0.0" width="289.5" height="16.5"/>
                                                                             <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="12"/>
                                                                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <color key="highlightedColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -153,16 +154,16 @@ CQ
                                                             </subviews>
                                                         </stackView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s11-dK-3OV">
-                                                            <rect key="frame" x="0.0" y="44" width="568" height="20"/>
+                                                            <rect key="frame" x="0.0" y="44" width="382" height="20"/>
                                                             <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ine-hq-QxS">
-                                                            <rect key="frame" x="0.0" y="68" width="568" height="14"/>
+                                                            <rect key="frame" x="0.0" y="68" width="382" height="14"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="egv-Sn-1s3">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="568" height="14"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="382" height="14"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Investment amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQB-rM-bpD">
                                                                             <rect key="frame" x="0.0" y="0.0" width="89.5" height="14"/>
@@ -171,17 +172,17 @@ CQ
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Te0-LE-x4c">
-                                                                            <rect key="frame" x="93.5" y="0.0" width="427" height="14"/>
+                                                                            <rect key="frame" x="93.5" y="0.0" width="241" height="14"/>
                                                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                         </view>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JRu-QE-oke">
-                                                                            <rect key="frame" x="524.5" y="0.0" width="21" height="14"/>
+                                                                            <rect key="frame" x="338.5" y="0.0" width="21" height="14"/>
                                                                             <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="10"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bOU-xy-wQO">
-                                                                            <rect key="frame" x="549.5" y="0.0" width="18.5" height="14"/>
+                                                                            <rect key="frame" x="363.5" y="0.0" width="18.5" height="14"/>
                                                                             <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="10"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
@@ -191,10 +192,10 @@ CQ
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="g4a-yg-e3m">
-                                                            <rect key="frame" x="0.0" y="86" width="568" height="14"/>
+                                                            <rect key="frame" x="0.0" y="86" width="382" height="14"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="D6D-FF-9ef">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="568" height="14"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="382" height="14"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gain" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qLM-Zq-QhB">
                                                                             <rect key="frame" x="0.0" y="0.0" width="22" height="14"/>
@@ -203,17 +204,17 @@ CQ
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FDm-Ka-ONU">
-                                                                            <rect key="frame" x="26" y="0.0" width="451" height="14"/>
+                                                                            <rect key="frame" x="26" y="0.0" width="265" height="14"/>
                                                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                         </view>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+ 100.25" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ro1-fN-9Fn">
-                                                                            <rect key="frame" x="481" y="0.0" width="42.5" height="14"/>
+                                                                            <rect key="frame" x="295" y="0.0" width="42.5" height="14"/>
                                                                             <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="10"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(+10.25)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j7i-wK-3Em">
-                                                                            <rect key="frame" x="527.5" y="0.0" width="40.5" height="14"/>
+                                                                            <rect key="frame" x="341.5" y="0.0" width="40.5" height="14"/>
                                                                             <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="10"/>
                                                                             <color key="textColor" systemColor="systemGreenColor"/>
                                                                             <nil key="highlightedColor"/>
@@ -223,10 +224,10 @@ CQ
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="KS6-H6-bD3">
-                                                            <rect key="frame" x="0.0" y="104" width="568" height="14"/>
+                                                            <rect key="frame" x="0.0" y="104" width="382" height="14"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ju2-Xp-Buq">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="568" height="14"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="382" height="14"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Annual refund" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mS0-vh-T5U">
                                                                             <rect key="frame" x="0.0" y="0.0" width="66" height="14"/>
@@ -235,11 +236,11 @@ CQ
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ee0-c1-PgR">
-                                                                            <rect key="frame" x="66" y="0.0" width="471.5" height="14"/>
+                                                                            <rect key="frame" x="66" y="0.0" width="285.5" height="14"/>
                                                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                         </view>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10.5%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pzd-ov-lcW">
-                                                                            <rect key="frame" x="537.5" y="0.0" width="30.5" height="14"/>
+                                                                            <rect key="frame" x="351.5" y="0.0" width="30.5" height="14"/>
                                                                             <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="10"/>
                                                                             <color key="textColor" systemColor="systemGreenColor"/>
                                                                             <nil key="highlightedColor"/>
@@ -260,20 +261,20 @@ CQ
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="200" id="MbO-IX-7td">
-                                        <rect key="frame" x="0.0" y="178" width="600" height="200"/>
+                                        <rect key="frame" x="0.0" y="178" width="414" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MbO-IX-7td" id="P1r-MJ-viL">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="200"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="VSF-I2-4rE">
-                                                    <rect key="frame" x="16" y="8" width="568" height="184"/>
+                                                    <rect key="frame" x="16" y="8" width="382" height="184"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-4" translatesAutoresizingMaskIntoConstraints="NO" id="QQF-f0-dHq">
-                                                            <rect key="frame" x="0.0" y="0.0" width="568" height="46"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="382" height="46"/>
                                                             <subviews>
                                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your inital investment amount" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n9a-qs-xc7">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="568" height="36"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="382" height="36"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="36" id="vrP-Fy-Nli"/>
                                                                     </constraints>
@@ -281,7 +282,7 @@ CQ
                                                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                                 </textField>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="sEX-qs-O8W">
-                                                                    <rect key="frame" x="0.0" y="32" width="568" height="14"/>
+                                                                    <rect key="frame" x="0.0" y="32" width="382" height="14"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inial investment amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agf-qt-zgl">
                                                                             <rect key="frame" x="0.0" y="0.0" width="131" height="14"/>
@@ -293,7 +294,7 @@ CQ
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="USD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F0Y-IN-uoR">
-                                                                            <rect key="frame" x="135" y="0.0" width="433" height="14"/>
+                                                                            <rect key="frame" x="135" y="0.0" width="247" height="14"/>
                                                                             <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="12"/>
                                                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <nil key="highlightedColor"/>
@@ -303,10 +304,10 @@ CQ
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-4" translatesAutoresizingMaskIntoConstraints="NO" id="SEU-9D-0vO">
-                                                            <rect key="frame" x="0.0" y="54" width="568" height="46"/>
+                                                            <rect key="frame" x="0.0" y="54" width="382" height="46"/>
                                                             <subviews>
                                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Monthly dollar cost avaraging amount" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lMd-Bz-sb5">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="568" height="36"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="382" height="36"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="36" id="equ-39-fQz"/>
                                                                     </constraints>
@@ -314,7 +315,7 @@ CQ
                                                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                                 </textField>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="ypM-o8-KeG">
-                                                                    <rect key="frame" x="0.0" y="32" width="568" height="14"/>
+                                                                    <rect key="frame" x="0.0" y="32" width="382" height="14"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monthly dollar cost avaraging amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5YV-wf-Z8W">
                                                                             <rect key="frame" x="0.0" y="0.0" width="207.5" height="14"/>
@@ -326,7 +327,7 @@ CQ
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="USD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tUl-gh-onG">
-                                                                            <rect key="frame" x="211.5" y="0.0" width="356.5" height="14"/>
+                                                                            <rect key="frame" x="211.5" y="0.0" width="170.5" height="14"/>
                                                                             <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="12"/>
                                                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <nil key="highlightedColor"/>
@@ -336,10 +337,10 @@ CQ
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-4" translatesAutoresizingMaskIntoConstraints="NO" id="9iL-AZ-Stj">
-                                                            <rect key="frame" x="0.0" y="108" width="568" height="76"/>
+                                                            <rect key="frame" x="0.0" y="108" width="382" height="76"/>
                                                             <subviews>
                                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Ente inital date of investment" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lvK-hr-TPf">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="568" height="36"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="382" height="36"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="36" id="BJU-dI-wYA"/>
                                                                     </constraints>
@@ -347,10 +348,10 @@ CQ
                                                                     <textInputTraits key="textInputTraits"/>
                                                                 </textField>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="ef1-cg-c9q">
-                                                                    <rect key="frame" x="0.0" y="32" width="568" height="14"/>
+                                                                    <rect key="frame" x="0.0" y="32" width="382" height="14"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inial date of investment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s3e-4A-ajn">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="568" height="14"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="382" height="14"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="14" id="P4m-u2-Bpb"/>
                                                                             </constraints>
@@ -361,7 +362,10 @@ CQ
                                                                     </subviews>
                                                                 </stackView>
                                                                 <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Dqw-UK-0cp">
-                                                                    <rect key="frame" x="-2" y="42" width="572" height="35"/>
+                                                                    <rect key="frame" x="-2" y="42" width="386" height="35"/>
+                                                                    <connections>
+                                                                        <action selector="dateSliderDidChangeWith_sender:" destination="m5P-yF-Fun" eventType="valueChanged" id="FJp-i8-fSh"/>
+                                                                    </connections>
                                                                 </slider>
                                                             </subviews>
                                                         </stackView>
@@ -386,6 +390,7 @@ CQ
                     </tableView>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="6CB-H2-h1u"/>
                     <connections>
+                        <outlet property="dateSlider" destination="Dqw-UK-0cp" id="UxF-eU-qkX"/>
                         <outlet property="initialDateOfInvestmentTextField" destination="lvK-hr-TPf" id="QEb-Rd-zRf"/>
                         <outlet property="initialInvestmentAmountTextField" destination="n9a-qs-xc7" id="pC3-bh-MXP"/>
                         <outlet property="investmentAmountCurrencyLabel" destination="JRu-QE-oke" id="avy-lx-dq5"/>
@@ -407,28 +412,28 @@ CQ
             <objects>
                 <tableViewController id="5D4-wc-dN5" customClass="DateSelectionViewController" customModule="Dca_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="h9g-EE-hca">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" reuseIdentifier="cellId" rowHeight="64" id="wv1-nK-2d4" customClass="DateSelectionTableViewCell" customModule="Dca_Calculator" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="600" height="64"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="64"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wv1-nK-2d4" id="K9s-Cf-3tn">
-                                    <rect key="frame" x="0.0" y="0.0" width="556" height="64"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="370" height="64"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="TBp-NJ-ZFl">
-                                            <rect key="frame" x="16" y="8" width="524" height="48"/>
+                                            <rect key="frame" x="16" y="8" width="338" height="48"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="December 2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lRl-hD-5ew">
-                                                    <rect key="frame" x="0.0" y="0.0" width="524" height="29"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="338" height="29"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s7t-tU-w5t">
-                                                    <rect key="frame" x="0.0" y="29" width="524" height="19"/>
+                                                    <rect key="frame" x="0.0" y="29" width="338" height="19"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="12"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>

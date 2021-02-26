@@ -10,18 +10,25 @@ import UIKit
 class DateSelectionViewController: UITableViewController {
     
     var timeSeriesMonthlyAdjusted: TimeSeriesMonthlyAdjusted?
-    var monthInfos: [MonthInfo] = []
+    var selectedIdex: Int?
+    
+    private var monthInfos: [MonthInfo] = []
+    
+    var didSelectDate: ((Int) -> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setUpNavigation()
         setUpMonthInfo()
     }
     
+    private func setUpNavigation() {
+        title = "Select date"
+    }
+    
     private func setUpMonthInfo() {
-        if let monthInfos = timeSeriesMonthlyAdjusted?.getMonthInfos() {
-            self.monthInfos = monthInfos
-        }
+        monthInfos = timeSeriesMonthlyAdjusted?.getMonthInfos() ?? []
     }
 }
 
@@ -38,12 +45,15 @@ extension DateSelectionViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let index = indexPath.item
         let monthInfo = monthInfos[index]
+        
+        let isSelected = index == selectedIdex
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellId", for: indexPath) as! DateSelectionTableViewCell
-        cell.configure(with: monthInfo, index: index)
+        cell.configure(with: monthInfo, index: index, isSelected: isSelected)
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        didSelectDate?(indexPath.item)
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
@@ -53,7 +63,9 @@ class DateSelectionTableViewCell: UITableViewCell {
     @IBOutlet weak var monthLabel: UILabel!
     @IBOutlet weak var monthsAgoLabel: UILabel!
     
-    func configure(with monthInfo: MonthInfo, index: Int) {
+    func configure(with monthInfo: MonthInfo, index: Int, isSelected: Bool) {
+        accessoryType = isSelected ? .checkmark : .none
+        
         monthLabel.text = monthInfo.date.MMYYFormat
         
         if index == 1 {
