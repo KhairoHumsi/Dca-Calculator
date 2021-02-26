@@ -41,6 +41,12 @@ class CalculatorTableViewController: UITableViewController {
         initialDateOfInvestmentTextField.delegate = self
         
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDateSelection", let destination = segue.destination as? DateSelectionViewController, let timeSeriesMonthlyAdjusted = sender as? TimeSeriesMonthlyAdjusted {
+            destination.timeSeriesMonthlyAdjusted = timeSeriesMonthlyAdjusted
+        }
+    }
 }
 
 extension CalculatorTableViewController: UITextFieldDelegate {

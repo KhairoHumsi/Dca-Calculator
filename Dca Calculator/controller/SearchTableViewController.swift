@@ -113,11 +113,11 @@ class SearchTableViewController: UITableViewController, UIAnimatable {
                 print(error)
             case .finished: break
             }
-        } receiveValue: { [weak self] (timeSeriesMonthlyAdusted) in
+        } receiveValue: { [weak self] (timeSeriesMonthlyAdjusted) in
             self?.hideLoadingAnimation()
-            let asset = Asset(searchResult: searchResult, timeSeriesMonthlyAdjusted: timeSeriesMonthlyAdusted)
+            let asset = Asset(searchResult: searchResult, timeSeriesMonthlyAdjusted: timeSeriesMonthlyAdjusted)
+            
             self?.performSegue(withIdentifier: "showCalculator", sender: asset)
-//            print("success: \(timeSeriesMonthlyAdusted.getMonthInfos())")
         }.store(in: &subscribers)
     }
     

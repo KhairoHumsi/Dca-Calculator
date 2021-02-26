@@ -11,8 +11,8 @@ struct MonthInfo {
     let date: Date
     let adjustedOpen: Double
     let adjustedClose: Double
-    
 }
+
 struct TimeSeriesMonthlyAdjusted: Decodable {
     let meta: Meta
     let timeSeries: [String: OHLC]
@@ -24,13 +24,12 @@ struct TimeSeriesMonthlyAdjusted: Decodable {
     func getMonthInfos() -> [MonthInfo] {
         var monthInfos: [MonthInfo] = []
         let sortedTimeSeries = timeSeries.sorted(by: { $0.key > $1.key })
-        sortedTimeSeries.forEach { (dateString, ohlc) in
+        for (dateString, ohlc) in sortedTimeSeries {
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "yyyy-MM-dd"
-            print("testedgsgsfd: \(dateString)")
-            let date = dateFormatter.date(from: dateString)!
+            guard let date = dateFormatter.date(from: dateString) else { continue }
             let adiustedOpen = getAdjustedOpen(ohlc: ohlc)
-            let monthInfo = MonthInfo(date: date, adjustedOpen: adiustedOpen, adjustedClose: Double(ohlc.adjustClose)!)
+            let monthInfo = MonthInfo(date: date, adjustedOpen: adiustedOpen, adjustedClose: Double(ohlc.adjustedClose)!)
             monthInfos.append(monthInfo)
         }
         
@@ -38,8 +37,34 @@ struct TimeSeriesMonthlyAdjusted: Decodable {
     }
     
     private func getAdjustedOpen(ohlc: OHLC) -> Double {
-        return Double(ohlc.open)! * (Double(ohlc.adjustClose)! / Double(ohlc.close)!)
+        return Double(ohlc.open)! * (Double(ohlc.adjustedClose)! / Double(ohlc.close)!)
     }
+    
+    //    func getMonthInfos() -> [MonthInfo] {
+    //        var monthInfos: [MonthInfo] = []
+    //        let sortedTimeSeries = timeSeries.sorted(by: { $0.key > $1.key })
+    //        for (dateString, ohlc) in sortedTimeSeries {
+    //            let dateFormatter = DateFormatter()
+    //            dateFormatter.dateFormat = "yyyy-MM-dd"
+    //            guard let date = dateFormatter.date(from: dateString),
+    //                  let adjustedOpen = getAdjustedOpen(ohlc: ohlc),
+    //                  let adjustedClose = ohlc.adjustedClose.toDouble() else { return [] }
+    //            print("sfdgdfgd: \(adjustedOpen), \(adjustedClose)")
+    //
+    //            let monthInfo = MonthInfo(date: date, adjustedOpen: adjustedOpen, adjustedClose: adjustedClose)
+    //            monthInfos.append(monthInfo)
+    //        }
+    //
+    //        print("sfdgdfgd: \(monthInfos.count)")
+    //        return monthInfos
+    //    }
+    //
+    //    private func getAdjustedOpen(ohlc: OHLC) -> Double? {
+    //        guard let open = ohlc.open.toDouble(),
+    //            let adjustedClose = ohlc.adjustedClose.toDouble(),
+    //            let close = ohlc.close.toDouble() else { return nil }
+    //        return open * adjustedClose / close
+    //    }
 }
 
 struct Meta: Decodable {
@@ -52,10 +77,10 @@ struct Meta: Decodable {
 struct OHLC: Decodable {
     let open: String
     let close: String
-    let adjustClose: String
+    let adjustedClose: String
     enum CodingKeys: String, CodingKey {
         case open = "1. open"
         case close = "4. close"
-        case adjustClose = "5. adjusted close"
+        case adjustedClose = "5. adjusted close"
     }
 }
