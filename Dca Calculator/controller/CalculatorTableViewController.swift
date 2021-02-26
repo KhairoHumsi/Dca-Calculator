@@ -10,6 +10,11 @@ import Combine
 
 class CalculatorTableViewController: UITableViewController {
     
+    @IBOutlet weak var currentValueLabel: UILabel!
+    @IBOutlet weak var investmentAmountLabel: UILabel!
+    @IBOutlet weak var gainLabel: UILabel!
+    @IBOutlet weak var yieldLabel: UILabel!
+    @IBOutlet weak var annualReturnLabel: UILabel!
     @IBOutlet weak var initialInvestmentAmountTextField: UITextField!
     @IBOutlet weak var monthlyDollrtCostAveragingTextField: UITextField!
     @IBOutlet weak var initialDateOfInvestmentTextField: UITextField!
@@ -26,6 +31,7 @@ class CalculatorTableViewController: UITableViewController {
     @Published private var monthlyDollrtCostAveraging : Int?
     
     private var subsicribers = Set<AnyCancellable>()
+    private let dcaService = DCAService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,9 +89,26 @@ class CalculatorTableViewController: UITableViewController {
             print("monthlyDollrtCostAveragingTextField: \(text)")
         }.store(in: &subsicribers)
         
-        Publishers.CombineLatest3($initialInvestmentAmount, $monthlyDollrtCostAveraging, $initialDateOfInvestmentIndex).sink { (initialInvestmentAmount, monthlyDollrtCostAveraging, initialDateOfInvestmentIndex) in
-            print("\(initialInvestmentAmount), \(monthlyDollrtCostAveraging), \(initialDateOfInvestmentIndex)")
+        Publishers.CombineLatest3($initialInvestmentAmount, $monthlyDollrtCostAveraging, $initialDateOfInvestmentIndex).sink { [weak self] (initialInvestmentAmount, monthlyDollrtCostAveraging, initialDateOfInvestmentIndex) in
+            
+            guard let asset = self?.asset,
+                  let initialInvestmentAmount = initialInvestmentAmount,
+                  let monthlyDollrtCostAveraging = monthlyDollrtCostAveraging,
+                  let initialDateOfInvestmentIndex = initialDateOfInvestmentIndex
+            else { return }
+            
+            let result = self?.dcaService.calculate(asset: asset, initialInvestmentAmount: initialInvestmentAmount.doubleValue, monthlyDollerCostAvaregingAmount: monthlyDollrtCostAveraging.doubleValue, initialDateOfInvestmentIndex: initialDateOfInvestmentIndex)
+            
+            self?.currentValueLabel.text = result?.currentValue.stringValue
+            self?.investmentAmountLabel.text = result?.investmentAmount.stringValue
+            self?.gainLabel.text = result?.gainAmount.stringValue
+            self?.yieldLabel.text = result?.yield.stringValue
+            self?.annualReturnLabel.text = result?.annualReturn.stringValue
+            
+            
         }.store(in: &subsicribers)
+        
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

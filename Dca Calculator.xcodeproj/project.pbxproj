@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		726D5A1625E6AFF5008DB081 /* SearchPlaceHolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726D5A1525E6AFF5008DB081 /* SearchPlaceHolderView.swift */; };
 		726D5A1C25E6B825008DB081 /* UIAnimatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726D5A1B25E6B825008DB081 /* UIAnimatable.swift */; };
+		72701A9725E8E87F00F14369 /* DCAService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72701A9625E8E87F00F14369 /* DCAService.swift */; };
 		72710D6725E78FC00054F8C8 /* TimeSeriesMonthlyAdjusted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72710D6625E78FC00054F8C8 /* TimeSeriesMonthlyAdjusted.swift */; };
 		7276C28625E8C0A200A735F6 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7276C28525E8C0A200A735F6 /* Date+Extensions.swift */; };
 		7276C28925E8CA2700A735F6 /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7276C28825E8CA2700A735F6 /* Int+Extensions.swift */; };
@@ -35,6 +36,7 @@
 		091DFCBDAA8B0779DEFA2672 /* Pods_Dca_Calculator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dca_Calculator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		726D5A1525E6AFF5008DB081 /* SearchPlaceHolderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPlaceHolderView.swift; sourceTree = "<group>"; };
 		726D5A1B25E6B825008DB081 /* UIAnimatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAnimatable.swift; sourceTree = "<group>"; };
+		72701A9625E8E87F00F14369 /* DCAService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCAService.swift; sourceTree = "<group>"; };
 		72710D6625E78FC00054F8C8 /* TimeSeriesMonthlyAdjusted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSeriesMonthlyAdjusted.swift; sourceTree = "<group>"; };
 		7276C28525E8C0A200A735F6 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		7276C28825E8CA2700A735F6 /* Int+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				72A9B84025E6289C00B33FE4 /* APIService.swift */,
+				72701A9625E8E87F00F14369 /* DCAService.swift */,
 			);
 			path = service;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 				72710D6725E78FC00054F8C8 /* TimeSeriesMonthlyAdjusted.swift in Sources */,
 				7276C28625E8C0A200A735F6 /* Date+Extensions.swift in Sources */,
 				7286370925E8172C00669F26 /* Double+Extensions.swift in Sources */,
+				72701A9725E8E87F00F14369 /* DCAService.swift in Sources */,
 				7286370625E8105200669F26 /* DateSelectionViewController.swift in Sources */,
 				7286370325E804AE00669F26 /* UITextField+Extenstions.swift in Sources */,
 				72A9B84525E62AF000B33FE4 /* SearchModel.swift in Sources */,
