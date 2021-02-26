@@ -29,7 +29,7 @@ struct DCAService {
                                            investmentAmount: investmentAmount,
                                            initialDateOfInvestmentIndex: initialDateOfInvestmentIndex)
         
-        return .init(currentValue: currentValue, investmentAmount: investmentAmount, gainAmount: gain, yield: 0, annualReturn: 0, isProfitable: isProfitable)
+        return .init(currentValue: currentValue, investmentAmount: investmentAmount, gainAmount: gain, yield: yield, annualReturn: annualReturn, isProfitable: isProfitable)
     }
     
     private func getInvestmentAmount(initialInvestmentAmount: Double, monthlyDollerCostAvaregingAmount: Double, initialDateOfInvestmentIndex: Int) -> Double {

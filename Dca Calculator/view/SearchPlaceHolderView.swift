@@ -10,7 +10,7 @@ import UIKit
 class SearchPlaceHolderView: UIView {
     
     private let imageView: UIImageView = {
-        let image = UIImage(named: "imDca")
+        let image = UIImage(named: "imLaunch")
         let imageView = UIImageView()
         imageView.image = image
         imageView.contentMode = .scaleAspectFit
@@ -19,7 +19,7 @@ class SearchPlaceHolderView: UIView {
     
     private let titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "Search for companies to potential returns via doller cost averaging."
+        label.text = "Search for companies to potential returns via doller cost averaging"
         label.font = UIFont(name: "AvenirNext-Medium", size: 14)
         label.numberOfLines = 0
         label.textAlignment = .center
@@ -49,7 +49,7 @@ class SearchPlaceHolderView: UIView {
             stackView.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.8),
             stackView.centerYAnchor.constraint(equalTo: centerYAnchor),
             stackView.centerXAnchor.constraint(equalTo: centerXAnchor),
-            stackView.heightAnchor.constraint(equalToConstant: 188)
+            stackView.heightAnchor.constraint(equalToConstant: 190)
         ])
     }
 }

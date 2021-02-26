@@ -47,6 +47,7 @@ class SearchTableViewController: UITableViewController, UIAnimatable {
     }
 
     private func setUpTableView() {
+        tableView.isScrollEnabled = false
         tableView.tableFooterView = UIView()
     }
     
@@ -66,6 +67,7 @@ class SearchTableViewController: UITableViewController, UIAnimatable {
                 } receiveValue: { (searchModel) in
                     self.searchModel = searchModel
                     self.tableView.reloadData()
+                    self.tableView.isScrollEnabled = true
                 }.store(in: &subscribers)
             }.store(in: &subscribers)
         
@@ -118,6 +120,7 @@ class SearchTableViewController: UITableViewController, UIAnimatable {
             let asset = Asset(searchResult: searchResult, timeSeriesMonthlyAdjusted: timeSeriesMonthlyAdjusted)
             
             self?.performSegue(withIdentifier: "showCalculator", sender: asset)
+            self?.searchController.searchBar.text = nil
         }.store(in: &subscribers)
     }
     
